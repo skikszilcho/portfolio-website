@@ -1,0 +1,27 @@
+﻿# =============================================================================
+# Portfolio Website â€” .gitignore
+# =============================================================================
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+
+# Node / build output (for when React + Vite is added)
+node_modules/
+dist/
+build/
+.vite/
+
+# OS & editor noise
+.DS_Store
+Thumbs.db
+*.Zone.Identifier
+.vscode/
+.idea/
+*.swp
+
+# Planning & internal documents â€” never publish
+*-plan.md
+EDITS-GUIDE.md
+aws-free-tier-plan.md
