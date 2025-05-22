@@ -1,3 +1,5 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 /* =========================================================
    BASE / RESET / THEME VARIABLES
 ========================================================= */
@@ -18,7 +20,7 @@
   --second-bg-color: #f3f3f7;
   --text-color: #1a1a1a;
   --muted-color: #555;
-  --main-color: #7b5cff;
+  --main-color: #6c47ff;
   --shadow: 0 .4rem 1.2rem rgba(0,0,0,.12);
 
   /* constant gap between the two home sides */
@@ -31,6 +33,7 @@
   --second-bg-color: #1c1f2b;
   --text-color: #f5f5f5;
   --muted-color: #b8b8c0;
+  --main-color: #a78bff;
   --shadow: 0 .4rem 1.2rem rgba(0,0,0,.45);
 }
 
@@ -60,7 +63,7 @@ section { min-height: 100vh; padding: 10rem 9% 6rem; }
 }
 
 .home-content .btn {
-  justify-self: start;   /* don't stretch — hug the content */
+  justify-self: start;   /* don't stretch â€” hug the content */
   width: max-content;    /* size to the text + padding only */
 }
 
@@ -217,7 +220,7 @@ section { min-height: 100vh; padding: 10rem 9% 6rem; }
   color: var(--main-color);
   white-space: normal;
 
-  /* ❌ REMOVE these two lines to match the picture: */
+  /* âŒ REMOVE these two lines to match the picture: */
   background: var(--bg-color);
   z-index: 2;  /* sits above the arc*/
   /* border: .2rem solid var(--main-color); */
