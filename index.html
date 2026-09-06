@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===========================  HEADER  =========================== -->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="logo.png" alt="Logo" class="logo-img" />
+    </a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#stack">Stack</a>
+      <a href="#experience">Experience</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="bx bx-moon" id="darkMode-icon"></div>
+  </header>
+
+  <!-- ===========================  HOME  =========================== -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Hello, It's Me</h3>
+      <h1>Ikageng Sebesho</h1>
+      <h3>And I'm a <span class="typing-text">Web Developer</span></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <div class="social-media">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+      </div>
+
+      <a href="#" class="btn">Download CV</a>
+    </div>
+
+    <!-- ===== RIGHT SIDE: purple diagonal + photo + rotating arc ===== -->
+    <div class="home-img">
+      <!-- Purple diagonal background -->
+      <div class="rhombus"></div>
+
+      <!-- Person photo placeholder (swap for a real <img> later) -->
+      <div class="person">
+        <!-- <span><i class="bx bx-user"></i><br>Photo Placeholder</span> -->
+         <img src="Picture1.png" alt="Personal Image" style="height: 555px; width: 480px;" />
+      </div>
+
+      <!-- Rotating profession arc -->
+      <div class="profession-container">
+        <div class="profession-box">
+          <div class="profession" style="--i:0;">
+            <i class="bx bx-code-alt"></i><h3>Web Developer</h3>
+          </div>
+          <div class="profession" style="--i:1;">
+            <i class="bx bx-brain"></i><h3>AI Engineer</h3>
+          </div>
+          <div class="profession" style="--i:2;">
+            <i class="bx bx-bot"></i><h3>Applied AI Developer</h3>
+          </div>
+          <div class="profession" style="--i:3;">
+            <i class="bx bx-bulb"></i><h3>Solutions Developer</h3>
+          </div>
+        </div>
+        <span class="arc"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================  ABOUT  =========================== -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <div class="img-placeholder"><i class="bx bx-image"></i> About Image Placeholder</div>
+    </div>
+    <div class="about-content">
+      <h2 class="heading" style="margin-bottom:1rem;">About <span>Me</span></h2>
+      <h3>Applied AI &amp; Solutions Developer</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat similique
+        modi facilis, commodi dolore sed. Laudantium, vitae iure. Placeholder text
+        describing your background, skills and experience goes here.
+      </p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+  </section>
+
+  <!-- ===========================  TECH STACK  =========================== -->
+  <section id="stack" class="stack">
+    <h2 class="heading">My Tech <span>Stack</span></h2>
+
+    <div class="stack-layout">
+
+      <!-- Left column: animation centred on the Frameworks/Tools boundary -->
+      <div class="stack-left">
+        <div class="dw-wrapper" aria-hidden="true">
+        <svg class="dw-svg" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 300 225" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <!-- laptop frame: purple→violet→cyan -->
+            <linearGradient id="dw-frame" x1="70" y1="28" x2="230" y2="185" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#8b5cf6"/>
+              <stop offset="55%"  stop-color="#6d28d9"/>
+              <stop offset="100%" stop-color="#22d3ee"/>
+            </linearGradient>
+            <!-- screen background: deep navy -->
+            <linearGradient id="dw-screen" x1="80" y1="35" x2="220" y2="155" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#17132f"/>
+              <stop offset="100%" stop-color="#080a18"/>
+            </linearGradient>
+            <!-- base: violet→purple→cyan -->
+            <linearGradient id="dw-base" x1="70" y1="170" x2="230" y2="200" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#5b21b6"/>
+              <stop offset="50%"  stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#0891b2"/>
+            </linearGradient>
+            <!-- cup body: dark violet -->
+            <linearGradient id="dw-cup" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%"   stop-color="#4c1d95"/>
+              <stop offset="100%" stop-color="#2e1065"/>
+            </linearGradient>
+            <!-- cup highlight -->
+            <linearGradient id="dw-cup-hl" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%"   stop-color="#7c3aed" stop-opacity="0.7"/>
+              <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+            </linearGradient>
+            <!-- desk surface -->
+            <linearGradient id="dw-desk" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%"   stop-color="#1e1b4b"/>
+              <stop offset="100%" stop-color="#0f0e24"/>
+            </linearGradient>
+            <!-- screen glow (radial, centred on screen) -->
+            <radialGradient id="dw-sglow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"   stop-color="#7c3aed" stop-opacity="0.28"/>
+              <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+            </radialGradient>
+            <!-- soft drop shadow filter -->
+            <filter id="dw-shadow" x="-20%" y="-20%" width="140%" height="160%">
+              <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#000" flood-opacity="0.5"/>
+            </filter>
+            <!-- glow blur for screen -->
+            <filter id="dw-glow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="4" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <!-- screen clip -->
+            <clipPath id="dw-clip">
+              <rect x="80" y="33" width="140" height="95" rx="3"/>
+            </clipPath>
+          </defs>
+
+          <!-- ░░ AMBIENT BACKGROUND GLOWS ░░ -->
+          <circle class="dw-bg-glow dw-bg-a" cx="145" cy="110" r="65" fill="#6d28d9"/>
+          <circle class="dw-bg-glow dw-bg-b" cx="55"  cy="170" r="30" fill="#0891b2"/>
+
+          <!-- ░░ DESK SURFACE ░░ -->
+          <rect x="0" y="188" width="300" height="37" fill="url(#dw-desk)"/>
+          <!-- desk top edge highlight -->
+          <line x1="0" y1="188" x2="300" y2="188" stroke="#312e81" stroke-width="1"/>
+          <!-- laptop shadow on desk -->
+          <ellipse class="dw-shadow" cx="150" cy="193" rx="72" ry="6" fill="#000" opacity="0.35"/>
+          <!-- cup shadow on desk -->
+          <ellipse class="dw-shadow" cx="54"  cy="193" rx="16" ry="3"  fill="#000" opacity="0.3"/>
+
+          <!-- ░░ LAPTOP DEVICE (floats gently) ░░ -->
+          <g class="dw-device" filter="url(#dw-shadow)">
+
+            <!-- ── Screen lid ── -->
+            <rect x="72" y="22" width="156" height="112" rx="8" fill="url(#dw-frame)"/>
+            <!-- inner bezel -->
+            <rect x="77" y="27" width="146" height="102" rx="5" fill="#0d0f1e"/>
+            <!-- screen surface -->
+            <rect x="80" y="33" width="140" height="95"  rx="3" fill="url(#dw-screen)"/>
+            <!-- camera dot -->
+            <circle cx="150" cy="29.5" r="1.5" fill="#22d3ee"/>
+            <!-- subtle screen glow overlay (pulses) -->
+            <rect class="dw-screen-pulse" x="80" y="33" width="140" height="95" rx="3" fill="url(#dw-sglow)"/>
+
+            <!-- ── Screen content (clipped) ── -->
+            <g clip-path="url(#dw-clip)">
+              <!-- shine sweep -->
+              <rect class="dw-shine" x="-30" y="28" width="28" height="110" rx="4"
+                    fill="#fff" opacity="0.06" transform="rotate(12 -30 28)"/>
+
+              <!-- traffic lights -->
+              <circle cx="90"  cy="43" r="2.5" fill="#f87171"/>
+              <circle cx="99"  cy="43" r="2.5" fill="#fbbf24"/>
+              <circle cx="108" cy="43" r="2.5" fill="#34d399"/>
+
+              <!-- editor gutter line -->
+              <line x1="118" y1="52" x2="118" y2="123" stroke="#8b5cf6" stroke-opacity="0.25"/>
+
+              <!-- file sidebar -->
+              <rect x="83" y="55" width="24" height="2.5" rx="1.2" fill="#7c3aed"/>
+              <rect x="83" y="63" width="18" height="2.5" rx="1.2" fill="#334155"/>
+              <rect x="83" y="71" width="21" height="2.5" rx="1.2" fill="#334155"/>
+              <rect x="83" y="79" width="15" height="2.5" rx="1.2" fill="#334155"/>
+              <rect x="83" y="87" width="20" height="2.5" rx="1.2" fill="#334155"/>
+              <rect x="83" y="95" width="16" height="2.5" rx="1.2" fill="#334155"/>
+              <rect x="83" y="103" width="22" height="2.5" rx="1.2" fill="#334155"/>
+              <rect x="83" y="111" width="17" height="2.5" rx="1.2" fill="#334155"/>
+
+              <!-- code lines (animate with scaleX from left) -->
+              <rect class="dw-cl dw-cl-1" x="124" y="55"  width="72"  height="3.5" rx="1.7" fill="#22d3ee"/>
+              <rect class="dw-cl dw-cl-2" x="124" y="64"  width="88"  height="3.5" rx="1.7" fill="#a78bfa"/>
+              <rect class="dw-cl dw-cl-3" x="130" y="73"  width="56"  height="3.5" rx="1.7" fill="#f472b6"/>
+              <rect class="dw-cl dw-cl-4" x="130" y="82"  width="76"  height="3.5" rx="1.7" fill="#34d399"/>
+              <rect class="dw-cl dw-cl-5" x="124" y="91"  width="48"  height="3.5" rx="1.7" fill="#fbbf24"/>
+              <rect class="dw-cl dw-cl-6" x="124" y="100" width="92"  height="3.5" rx="1.7" fill="#38bdf8"/>
+              <rect class="dw-cl dw-cl-7" x="130" y="109" width="62"  height="3.5" rx="1.7" fill="#c084fc"/>
+              <rect class="dw-cl dw-cl-8" x="124" y="118" width="80"  height="3.5" rx="1.7" fill="#f472b6"/>
+
+              <!-- cursor -->
+              <rect class="dw-cursor" x="207" y="108" width="2" height="8" rx="1" fill="#fff"/>
+            </g>
+
+            <!-- ── Hinge ── -->
+            <rect x="76" y="132" width="148" height="5" rx="2" fill="#1e1b4b"/>
+            <rect x="76" y="133" width="148" height="2" rx="1" fill="#4c1d95" opacity="0.6"/>
+
+            <!-- ── Base ── -->
+            <path d="M62 137 H238 L252 188 H48 Z" fill="url(#dw-base)"/>
+            <!-- keyboard deck -->
+            <path d="M68 141 H232 L244 184 H56 Z" fill="#17132f" opacity="0.8"/>
+
+            <!-- keyboard keys row 1 -->
+            <g class="dw-keys" fill="#6d28d9">
+              <rect x="70"  y="148" width="10" height="3" rx="1"/>
+              <rect x="84"  y="148" width="10" height="3" rx="1"/>
+              <rect x="98"  y="148" width="10" height="3" rx="1"/>
+              <rect x="112" y="148" width="10" height="3" rx="1"/>
+              <rect x="126" y="148" width="10" height="3" rx="1"/>
+              <rect x="140" y="148" width="10" height="3" rx="1"/>
+              <rect x="154" y="148" width="10" height="3" rx="1"/>
+              <rect x="168" y="148" width="10" height="3" rx="1"/>
+              <rect x="182" y="148" width="10" height="3" rx="1"/>
+              <rect x="196" y="148" width="10" height="3" rx="1"/>
+              <rect x="210" y="148" width="10" height="3" rx="1"/>
+              <!-- row 2 -->
+              <rect x="74"  y="156" width="10" height="3" rx="1"/>
+              <rect x="88"  y="156" width="10" height="3" rx="1"/>
+              <rect x="102" y="156" width="10" height="3" rx="1"/>
+              <rect x="116" y="156" width="10" height="3" rx="1"/>
+              <rect x="130" y="156" width="10" height="3" rx="1"/>
+              <rect x="144" y="156" width="10" height="3" rx="1"/>
+              <rect x="158" y="156" width="10" height="3" rx="1"/>
+              <rect x="172" y="156" width="10" height="3" rx="1"/>
+              <rect x="186" y="156" width="10" height="3" rx="1"/>
+              <rect x="200" y="156" width="10" height="3" rx="1"/>
+              <rect x="214" y="156" width="10" height="3" rx="1"/>
+              <!-- row 3 -->
+              <rect x="78"  y="164" width="10" height="3" rx="1"/>
+              <rect x="92"  y="164" width="10" height="3" rx="1"/>
+              <rect x="106" y="164" width="10" height="3" rx="1"/>
+              <rect x="120" y="164" width="10" height="3" rx="1"/>
+              <rect x="134" y="164" width="10" height="3" rx="1"/>
+              <rect x="148" y="164" width="10" height="3" rx="1"/>
+              <rect x="162" y="164" width="10" height="3" rx="1"/>
+              <rect x="176" y="164" width="10" height="3" rx="1"/>
+              <rect x="190" y="164" width="10" height="3" rx="1"/>
+              <rect x="204" y="164" width="10" height="3" rx="1"/>
+              <!-- spacebar -->
+              <rect x="106" y="172" width="88"  height="3" rx="1"/>
+            </g>
+            <!-- trackpad -->
+            <rect x="129" y="178" width="42" height="6" rx="3" fill="#1e1b4b" opacity="0.7"/>
+          </g>
+
+          <!-- ░░ COFFEE CUP (left of laptop) ░░ -->
+          <g class="dw-cup-group">
+            <!-- grounding shadow -->
+            <ellipse cx="54" cy="191" rx="15" ry="3" fill="#000" opacity="0.25"/>
+            <!-- cup body -->
+            <rect x="38" y="158" width="32" height="32" rx="4" fill="url(#dw-cup)"/>
+            <!-- cup body highlight strip -->
+            <rect x="38" y="158" width="8"  height="32" rx="4" fill="url(#dw-cup-hl)"/>
+            <!-- cup rim -->
+            <rect x="36" y="155" width="36" height="6"  rx="3" fill="#5b21b6"/>
+            <!-- rim highlight -->
+            <rect x="38" y="155" width="32" height="2"  rx="1" fill="#8b5cf6" opacity="0.5"/>
+            <!-- cup base strip -->
+            <rect x="40" y="186" width="28" height="3"  rx="1.5" fill="#3b0764"/>
+            <!-- handle -->
+            <path d="M70 165 Q82 165 82 172 Q82 179 70 179" fill="none" stroke="#5b21b6" stroke-width="3" stroke-linecap="round"/>
+            <!-- inner coffee surface -->
+            <ellipse cx="54" cy="159" rx="14" ry="3.5" fill="#1e0a3c"/>
+            <!-- inner surface sheen -->
+            <ellipse cx="50" cy="158" rx="5"  ry="1.5" fill="#7c3aed" opacity="0.3"/>
+
+            <!-- ── STEAM trails (three, each independent loop) ── -->
+            <!-- trail A -->
+            <path class="dw-steam dw-steam-a"
+                  d="M46 153 C44 147 48 141 46 135 C44 129 48 123 46 117"
+                  fill="none" stroke="#a78bfa" stroke-width="2"
+                  stroke-linecap="round" opacity="0"/>
+            <!-- trail B -->
+            <path class="dw-steam dw-steam-b"
+                  d="M54 152 C52 146 56 140 54 134 C52 128 56 122 54 116"
+                  fill="none" stroke="#c4b5fd" stroke-width="1.5"
+                  stroke-linecap="round" opacity="0"/>
+            <!-- trail C -->
+            <path class="dw-steam dw-steam-c"
+                  d="M62 153 C64 147 60 141 62 135 C64 129 60 123 62 117"
+                  fill="none" stroke="#a78bfa" stroke-width="1.8"
+                  stroke-linecap="round" opacity="0"/>
+          </g>
+
+          <!-- ░░ SMALL DESK DETAILS ░░ -->
+          <!-- cable loop on desk -->
+          <path d="M240 192 Q255 188 265 192 Q275 196 265 200" fill="none"
+                stroke="#4c1d95" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+          <!-- tiny dot accent top-right -->
+          <circle class="dw-dot dw-dot-a" cx="268" cy="38" r="2" fill="#22d3ee" opacity="0.5"/>
+          <circle class="dw-dot dw-dot-b" cx="280" cy="55" r="1.5" fill="#a78bfa" opacity="0.5"/>
+          <circle class="dw-dot dw-dot-c" cx="22"  cy="48" r="1.8" fill="#f472b6" opacity="0.5"/>
+          <circle class="dw-dot dw-dot-d" cx="30"  cy="30" r="1.2" fill="#38bdf8" opacity="0.5"/>
+
+        </svg>
+        </div>
+      </div>
+
+      <!-- Right column: all four card groups -->
+      <div class="stack-right">
+
+        <div class="stack-group">
+          <h3 class="stack-group-label">Languages</h3>
+          <div class="stack-grid">
+            <div class="stack-card"><i class="bx bxl-python"></i><span>Python</span></div>
+            <div class="stack-card"><i class="bx bxl-javascript"></i><span>JavaScript</span></div>
+            <div class="stack-card"><i class="bx bxl-html5"></i><span>HTML5</span></div>
+            <div class="stack-card"><i class="bx bxl-css3"></i><span>CSS3</span></div>
+            <div class="stack-card"><i class="bx bxs-data"></i><span>SQL</span></div>
+            <div class="stack-card"><i class="bx bx-terminal"></i><span>Bash</span></div>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <h3 class="stack-group-label">Frameworks &amp; Libraries</h3>
+          <div class="stack-grid">
+            <div class="stack-card"><i class="bx bxl-react"></i><span>React</span></div>
+            <div class="stack-card"><i class="bx bxl-python"></i><span>Pandas</span></div>
+            <div class="stack-card"><i class="bx bxl-python"></i><span>NumPy</span></div>
+            <div class="stack-card"><i class="bx bxl-python"></i><span>Scikit-Learn</span></div>
+            <div class="stack-card"><i class="bx bx-line-chart"></i><span>Matplotlib</span></div>
+            <div class="stack-card"><i class="bx bx-line-chart"></i><span>Seaborn</span></div>
+            <div class="stack-card"><i class="bx bxl-python"></i><span>SciPy</span></div>
+            <div class="stack-card"><i class="bx bxl-python"></i><span>Statsmodels</span></div>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <h3 class="stack-group-label">Tools &amp; Platforms</h3>
+          <div class="stack-grid">
+            <div class="stack-card"><i class="bx bxl-docker"></i><span>Docker</span></div>
+            <div class="stack-card"><i class="bx bxl-git"></i><span>Git</span></div>
+            <div class="stack-card"><i class="bx bx-bar-chart-alt-2"></i><span>Power BI</span></div>
+            <div class="stack-card"><i class="bx bx-data"></i><span>MySQL</span></div>
+            <div class="stack-card"><i class="bx bxl-microsoft"></i><span>MS Office</span></div>
+            <div class="stack-card"><i class="bx bx-cloud"></i><span>AWS</span></div>
+            <div class="stack-card"><i class="bx bx-terminal"></i><span>Linux</span></div>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <h3 class="stack-group-label">AI &amp; Automation</h3>
+          <div class="stack-grid">
+            <div class="stack-card"><i class="bx bx-bot"></i><span>watsonx Orchestrate</span></div>
+            <div class="stack-card"><i class="bx bx-brain"></i><span>watsonx GenAI</span></div>
+            <div class="stack-card"><i class="bx bx-chip"></i><span>AIOps</span></div>
+            <div class="stack-card"><i class="bx bx-search-alt"></i><span>RAG</span></div>
+            <div class="stack-card"><i class="bx bx-link"></i><span>LLM Integration</span></div>
+            <div class="stack-card"><i class="bx bx-message-square-dots"></i><span>NLP</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================  EXPERIENCE  =========================== -->
+  <section id="experience">
+    <h2 class="heading">My <span>Experience</span></h2>
+
+    <div class="exp-timeline">
+
+      <!-- ── IBM ── -->
+      <div class="exp-company-group">
+        <h3 class="exp-company-name">IBM</h3>
+
+        <div class="exp-entry">
+          <div class="exp-dot"></div>
+          <div class="exp-content">
+            <h4 class="exp-role">Information Technology Intern</h4>
+            <span class="exp-date">Dec 2025 — Present · Johannesburg, ZA</span>
+            <p>Working within IBM's enterprise technology environment, contributing to cloud, data, and AI-driven initiatives across internal and client-facing projects. Gained hands-on exposure to infrastructure, virtualisation, and cloud operations while developing practical skills in Python and data-driven workflows.</p>
+            <p>Participated in Agile sprints and Design Thinking sessions — from ideation and problem framing through to iterative solution reviews — contributing to structured delivery in a fast-moving enterprise context.</p>
+            <p>Operated with high autonomy, taking ownership of assigned technical tasks and adapting quickly to shifting priorities across multiple technology domains.</p>
+            <div class="exp-pills">
+              <span>Agile</span>
+              <span>Design Thinking</span>
+              <span>Python</span>
+              <span>Cloud Operations</span>
+              <span>Enterprise IT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Parthenius-Air ── -->
+      <div class="exp-company-group">
+        <h3 class="exp-company-name">Parthenius-Air</h3>
+
+        <div class="exp-entry">
+          <div class="exp-dot"></div>
+          <div class="exp-content">
+            <h4 class="exp-role">Data Analyst Intern</h4>
+            <span class="exp-date">May 2024 — Jun 2024 · South Africa</span>
+            <p>Analysed regional railway crime data to surface high-risk zones and recurring incident patterns, transforming raw data into actionable intelligence for safety and operations teams.</p>
+            <p>Built a GeoJSON-powered interactive heatmap that mapped crime hotspots by geolocation — giving field teams a spatial view of risk that static reports could not provide.</p>
+            <p>Designed a dynamic Power BI dashboard with KPIs that directly informed strategic decisions around intervention zones, resource allocation, and priority areas.</p>
+            <div class="exp-pills">
+              <span>Python</span>
+              <span>Power BI</span>
+              <span>Excel</span>
+              <span>GeoJSON</span>
+              <span>Data Visualisation</span>
+              <span>EDA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================  PORTFOLIO  =========================== -->
+  <section class="portfolio" id="portfolio">
+    <h2 class="heading">Featured <span>Projects</span></h2>
+    <div class="portfolio-stack-container" id="projects-container">
+      <!-- Dynamically populated from projects.json or rendered interactive code cards -->
+    </div>
+  </section>
+
+  <!-- ===========================  CONTACT  =========================== -->
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+    <form action="#">
+      <div class="input-box">
+        <input type="text" placeholder="Full Name" />
+        <input type="email" placeholder="Email Address" />
+      </div>
+      <div class="input-box">
+        <input type="tel" placeholder="Mobile Number" />
+        <input type="text" placeholder="Email Subject" />
+      </div>
+      <textarea cols="30" rows="8" placeholder="Your Message"></textarea>
+      <input type="submit" value="Send Message" class="btn" />
+    </form>
+  </section>
+
+  <!-- ===========================  FOOTER  =========================== -->
+  <footer class="footer">
+    <p>&copy; 2026 Ikageng Sebesho | All Rights Reserved.</p>
+    <div class="top">
+      <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+
+  <!-- Custom script -->
+  <script src="script.js"></script>
+</body>
+</html>

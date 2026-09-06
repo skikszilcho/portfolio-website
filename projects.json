@@ -1,0 +1,117 @@
+[
+  {
+    "id": "portfolio-website",
+    "title": "Portfolio Website & AI Assistant",
+    "description": "Full-stack personal portfolio and conversational assistant architecture built with modern web technologies, containerisation, and API integration.",
+    "category": "Web / Full-Stack",
+    "tags": ["React", "Node.js", "Express", "Docker", "JavaScript", "CSS3"],
+    "status": "in-progress",
+    "currentPhase": 1,
+    "totalPhases": 6,
+    "progressPercent": 15,
+    "repoUrl": "https://github.com/skikszilcho/portfolio-website",
+    "liveUrl": "#",
+    "imageUrl": "/images/projects/portfolio-placeholder.png",
+    "changelog": [
+      {
+        "version": "0.1.0",
+        "date": "2025-01",
+        "notes": "Initial static site with animated SVG workspace, dark/light theme toggle, and responsive layout."
+      },
+      {
+        "version": "0.2.0",
+        "date": "2025-02",
+        "notes": "Architecture planning, data schema design, and modular component specification."
+      }
+    ]
+  },
+  {
+    "id": "local-ai",
+    "title": "Local AI Environment",
+    "description": "Privacy-focused local environment for running open-source large language models, inference workflows, and document retrieval locally without external cloud dependencies.",
+    "category": "AI & Machine Learning",
+    "tags": ["Python", "Local LLMs", "RAG", "Vector Search", "Docker"],
+    "status": "in-progress",
+    "currentPhase": 2,
+    "totalPhases": 4,
+    "progressPercent": 50,
+    "repoUrl": "https://github.com/skikszilcho/local-AI",
+    "liveUrl": "",
+    "imageUrl": "/images/projects/local-ai.png",
+    "changelog": [
+      {
+        "version": "0.1.0",
+        "date": "2025-01",
+        "notes": "Initial containerised model deployment and runtime configuration."
+      },
+      {
+        "version": "0.2.0",
+        "date": "2025-02",
+        "notes": "Integrated local document context indexing and conversational execution interface."
+      }
+    ]
+  },
+  {
+    "id": "mise-en-place",
+    "title": "Mise-en-Place",
+    "description": "Smart recipe management and meal preparation platform designed to organise recipes, automate meal planning and prep schedules, and track grocery and ingredient inventory.",
+    "category": "Web / Application",
+    "tags": ["JavaScript", "React", "Tailwind CSS", "Database", "Full-Stack"],
+    "status": "in-progress",
+    "currentPhase": 1,
+    "totalPhases": 4,
+    "progressPercent": 25,
+    "repoUrl": "https://github.com/skikszilcho/mise-en-place",
+    "liveUrl": "",
+    "imageUrl": "/images/projects/mise-en-place.png",
+    "changelog": [
+      {
+        "version": "0.1.0",
+        "date": "2025-01",
+        "notes": "System architecture, recipe data model design, and initial meal planning workflow specifications."
+      }
+    ]
+  },
+  {
+    "id": "railway-crime-analytics",
+    "title": "Geospatial Railway Transit Analytics",
+    "description": "Exploratory data analysis, risk clustering, and interactive hotspot heatmaps to identify high-risk transit corridors and inform safety interventions.",
+    "category": "Data & Analytics",
+    "tags": ["Python", "Pandas", "Power BI", "GeoJSON", "EDA", "Data Visualisation"],
+    "status": "completed",
+    "currentPhase": 4,
+    "totalPhases": 4,
+    "progressPercent": 100,
+    "repoUrl": "",
+    "liveUrl": "",
+    "imageUrl": "/images/projects/railway-crime-analytics.png",
+    "changelog": [
+      {
+        "version": "1.0.0",
+        "date": "2024-06",
+        "notes": "Delivered interactive GeoJSON heatmap, automated data pipelines, and KPI dashboard for risk assessment."
+      }
+    ]
+  },
+  {
+    "id": "chemical-process-simulation-optimization",
+    "title": "Process Numerical Simulation & Optimisation",
+    "description": "Computational modelling, discretization, and constrained non-linear optimization for complex engineering dynamic systems and process efficiency analysis.",
+    "category": "Engineering / Simulation",
+    "tags": ["Python", "NumPy", "SciPy", "Numerical Simulation", "Optimisation"],
+    "status": "completed",
+    "currentPhase": 3,
+    "totalPhases": 3,
+    "progressPercent": 100,
+    "repoUrl": "",
+    "liveUrl": "",
+    "imageUrl": "/images/projects/process-simulation.png",
+    "changelog": [
+      {
+        "version": "1.0.0",
+        "date": "2024-11",
+        "notes": "Implemented mathematical solvers and nonlinear optimization algorithms for continuous process modelling and parameter estimation."
+      }
+    ]
+  }
+]

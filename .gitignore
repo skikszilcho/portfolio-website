@@ -25,3 +25,8 @@ Thumbs.db
 *-plan.md
 EDITS-GUIDE.md
 aws-free-tier-plan.md
+# Assets and documents excluded from repo
+*.pdf
+expPurple.svg
+Picture1.png
+
