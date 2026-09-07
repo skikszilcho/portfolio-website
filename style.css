@@ -111,87 +111,109 @@ section { min-height: 100vh; padding: 10rem 9% 6rem; }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: var(--home-gap);
+  min-height: 100vh;
+  padding: 11rem 9% 6rem;
 }
-.home-content, .home-img {
-  flex: 1 1 34rem;      /* grow | shrink | ideal basis */
-  min-width: 30rem;     /* forces the wrap when space runs out */
+.home-content {
+  flex: 1 1 42rem;
+  max-width: 58rem;
+  display: grid;
+  gap: 1.8rem;
 }
 
-.home-content {
-  max-width: 50rem;
-  display: grid;
-  gap: 1.6rem;
-}
-.home-content h3 { font-size: 3rem; font-weight: 700; }
-.home-content h1 { font-size: 5.4rem; font-weight: 700; line-height: 1.1; }
+.home-content h3 { font-size: 3.2rem; font-weight: 700; }
+.home-content h1 { font-size: 5.6rem; font-weight: 700; line-height: 1.1; }
 .home-content h3 span { color: var(--main-color); }
-.home-content p { font-size: 1.6rem; color: var(--muted-color); line-height: 1.7; }
+.home-content p { font-size: 1.65rem; color: var(--muted-color); line-height: 1.75; }
 
 .social-media {
-  display: grid;
-  grid-template-columns: repeat(4, max-content);
-  gap: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 .social-media a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 4.4rem;
+  height: 4.4rem;
   border: .2rem solid var(--main-color);
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--main-color);
   transition: .3s ease;
 }
 .social-media a:hover {
   background: var(--main-color);
   color: #fff;
-  box-shadow: 0 0 1rem var(--main-color);
+  box-shadow: 0 0 1.2rem var(--main-color);
+}
+
+.social-media .hackerrank-link {
+  padding: .8rem;
+}
+.social-media .hackerrank-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 /* =========================================================
-   RIGHT SIDE  (layered square)
-   z1 = arc  |  z2 = square (left triangle transparent)  |  z3 = photo
-========================================================= */
+   RIGHT SIDE (Scaled Rhombus, Photo & Rotating Wheel)
+   Layer hierarchy:
+   z1 = Rotating wheel (arc + professions)
+   z2 = Rhombus (covers 3 inactive professions, transparent on left)
+   z3 = Person photo
+ ========================================================= */
 .home-img {
+  flex: 1 1 56rem;
   position: relative;
-  right: -4rem;  /* shift the whole square to the right, so the left triangle is off-screen */
-  height: 48rem;
-  max-width: 52rem;
+  right: -3rem;
+  height: 66rem;
+  max-width: 82rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;               /* clip wheel/rhombus so they never bleed into the left side */
 }
 
-/* ---- Layer 2: the square, 3 purple triangles + transparent left triangle ----
-   The polygon traces the whole square but notches out the LEFT triangle
-   (top-left corner -> centre -> bottom-left corner), leaving it see-through. */
-.home-img .rhombus {
-  position: absolute;
-  inset: 0;
-  height: 105%;
-  background: var(--main-color);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 50% 50%, 0 0);
-  transform: translateY(-2%);
-  z-index: 2;
-}
-
-/* ---- Layer 1: rotating profession arc (sits behind the square) ---- */
+/* ---- Layer 1: Rotating profession wheel & Arc ---- */
 .profession-container {
+  position: absolute;
+  top: 50%;
+  left: 9rem;
+  transform: translateY(-50%);
+  width: 56rem;
+  height: 56rem;
+  z-index: 1;               /* sits behind rhombus */
+  pointer-events: none;
+}
+
+/* Static semicircle line (left half of the orbit) */
+.arc {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  width: 38rem;
-  height: 38rem;
-  z-index: 1;
+  width: 56rem;
+  height: 56rem;
+  border: .35rem solid var(--main-color);
+  border-radius: 50%;
+  clip-path: inset(0 50% 0 0);      /* show left half only */
+  z-index: 1;                      /* below the professions */
 }
+
 .profession-box {
   position: absolute;
   inset: 0;
   animation: professionRotate 13s ease-out infinite;
-  z-index: 2;
+  z-index: 2;                      /* sits on top of the arc */
 }
+
 @keyframes professionRotate {
   0%,   20%  { transform: rotate(0deg);    }
   25%,  45%  { transform: rotate(-90deg);  }
@@ -202,66 +224,72 @@ section { min-height: 100vh; padding: 10rem 9% 6rem; }
 
 .profession {
   position: absolute;
-  left: -6rem;
+  left: -11.3rem;
   top: 50%;
-  padding-bottom: 5rem;
-  padding-top: 6rem;
-
-  /* identical box for every profession (keeps the orbit consistent) */
-  width: 16rem;
-  height: 9rem;
+  width: 28rem;
+  min-height: 17rem;
+  padding: 1.8rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  gap: .2rem;
+  gap: 1rem;
   color: var(--main-color);
-  white-space: normal;
-
-  /* ❌ REMOVE these two lines to match the picture: */
-  background: var(--bg-color);
-  z-index: 2;  /* sits above the arc*/
-  /* border: .2rem solid var(--main-color); */
-
+  background: var(--bg-color);     /* solid bg hides the arc passing behind */
+  border-radius: 1.8rem;
+  white-space: normal;             /* allows text to wrap cleanly */
+  word-wrap: break-word;
+  z-index: 2;
   transform: translateY(-50%) rotate(calc(90deg * var(--i)));
-  transform-origin: 25rem center;   /* 19rem radius + 6rem shift */
+  transform-origin: 39.3rem center; /* 28rem radius (56rem/2) + 11.3rem offset -> bisects arc */
 }
 
-.profession i { font-size: 3.5rem; }
-.profession h3 { font-size: 2.8rem; font-weight: 700; }
+.profession i {
+  font-size: 5.6rem;
+  display: block;
+}
 
-/* Static semicircle line (left half of the disc) */
-.arc {
+.profession h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: normal;
+}
+
+/* ---- Layer 2: Rhombus (opaque purple on top/right/bottom, transparent left) ---- */
+.home-img .rhombus {
   position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 38rem;
-  height: 38rem;
-  border: .3rem solid var(--main-color);
-  border-radius: 50%;
-  clip-path: inset(0 50% 0 0);      /* show left half only */
-  z-index: 1;   /* below the professions */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--main-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 43% 50%, 0 0);
+  z-index: 2;                      /* covers the other 3 rotating professions */
+  pointer-events: none;
 }
 
-/* ---- Layer 3: photo placeholder, on top of everything ---- */
+/* ---- Layer 3: Person photo on top of rhombus ---- */
 .home-img .person {
   position: absolute;
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
-  top: -12.5%;
-  left: 17%;
-  width: 0px;
-  height: 0px;
-  min-height: 0rem;                    /* override generic placeholder */
-  z-index: 3;
-  border-radius: 1.2rem 1.2rem 0 0;
+  bottom: 0;
+  right: 10rem;
+  width: 110%;
+  height: 107%;
+  z-index: 3;                      /* sits on top of everything */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: auto;
 }
-.home-img .person span { line-height: 1.5; }
-.home-img .person i { font-size: 4rem; margin: 0; }
+
+.home-img .person img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom right;
+  display: block;
+}
 
 /* =========================================================
    IMAGE PLACEHOLDER (generic, used in About / Portfolio / photo)
@@ -997,15 +1025,29 @@ body:not(.dark-mode) .project-card {
    RESPONSIVE
 ========================================================= */
 @media (max-width: 1200px) {
-  /* disc shrinks 38rem -> 34rem, so radius = 17rem */
-  .profession-container, .arc { width: 34rem; height: 34rem; }
+  /* disc shrinks -> 44rem, radius = 22rem */
+  .profession-container, .arc { width: 44rem; height: 44rem; }
   .profession {
-    width: 14rem;
-    height: 8.5rem;
-    transform-origin: 21rem center;   /* 17rem radius + 4rem shift */
+    width: 22rem;
+    min-height: 13.5rem;
+    left: -9rem;
+    transform-origin: 31rem center;   /* 22rem radius + 9rem shift */
   }
-  .profession i  { font-size: 3.4rem; }
-  .profession h3 { font-size: 2.4rem; }
+  .profession i  { font-size: 4.5rem; }
+  .profession h3 { font-size: 2.6rem; }
+}
+
+@media (max-width: 1000px) {
+  /* disc shrinks -> 36rem, radius = 18rem */
+  .profession-container, .arc { width: 36rem; height: 36rem; }
+  .profession {
+    width: 18rem;
+    min-height: 11rem;
+    left: -7.2rem;
+    transform-origin: 25.2rem center;   /* 18rem radius + 7.2rem shift */
+  }
+  .profession i  { font-size: 3.6rem; }
+  .profession h3 { font-size: 2.2rem; }
 }
 
 @media (max-width: 992px) {
@@ -1042,12 +1084,13 @@ body:not(.dark-mode) .project-card {
   /* disc shrinks 34rem -> 30rem, so radius = 15rem */
   .profession-container, .arc { width: 30rem; height: 30rem; }
   .profession {
-    width: 12rem;
-    height: 8rem;
-    transform-origin: 19rem center;   /* 15rem radius + 4rem shift */
+    width: 16rem;
+    min-height: 10rem;
+    left: -6.5rem;
+    transform-origin: 21.5rem center;   /* 15rem radius + 6.5rem shift */
   }
-  .profession i  { font-size: 3rem; }
-  .profession h3 { font-size: 2.1rem; }
+  .profession i  { font-size: 4rem; }
+  .profession h3 { font-size: 2.8rem; }
 
   .contact .input-box { grid-template-columns: 1fr; }
 }
