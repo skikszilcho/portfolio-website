@@ -51,7 +51,7 @@ window.addEventListener('scroll', () => {
 /* =========================================================
    SIMPLE TYPING EFFECT (no external library)
 ========================================================= */
-const roles = ['Web Developer', 'AI Engineer', 'Applied AI Developer', 'Solutions Developer'];
+const roles = ['AI & Data Developer', 'AI Infrastructure', 'Platform Engineer', 'Solutions Developer'];
 const typeEl = document.querySelector('.typing-text');
 
 let roleIndex = 0;
@@ -79,66 +79,62 @@ type();
 
 /* =========================================================
    PROJECTS SECTION RENDER & STACKING INTERACTION
-   - Dynamic rendering from projects.json (with static fallback)
-   - Code-editor styled cards with syntax highlighting
-   - Color-coded status badges, animated progress bars, and latest changelog summaries
-   - Sticky stacking offsets on scroll
 ========================================================= */
 const fallbackProjects = [
   {
     "id": "portfolio-website",
-    "title": "Portfolio Website & AI Assistant",
-    "description": "Full-stack personal portfolio and conversational assistant architecture built with modern web technologies, containerisation, and API integration.",
+    "title": "Portfolio Website & AI Assistant (AskIka)",
+    "description": "Full-stack personal portfolio and conversational AI assistant built with React, Node.js/Express, Docker, and LLM integration, deployed on cloud infrastructure.",
     "category": "Web / Full-Stack",
-    "tags": ["React", "Node.js", "Express", "Docker", "JavaScript", "CSS3"],
+    "tags": ["React", "Node.js", "Express", "Docker", "LLM", "CSS3"],
     "status": "in-progress",
     "currentPhase": 1,
     "totalPhases": 6,
     "progressPercent": 15,
-    "repoUrl": "https://github.com/skikszilcho/portfolio-website",
+    "repoUrl": "https://github.com/IkagengSebesho/portfolio-website",
     "liveUrl": "#",
     "changelog": [
-      { "version": "0.1.0", "date": "2025-01", "notes": "Initial static site with animated SVG workspace, dark/light theme toggle, and responsive layout." },
-      { "version": "0.2.0", "date": "2025-02", "notes": "Architecture planning, data schema design, and modular component specification." }
+      { "version": "0.1.0", "date": "2025-01", "notes": "Initial static HTML/CSS/JS site with animated SVG workspace, dark/light theme toggle, and responsive layout." },
+      { "version": "0.2.0", "date": "2025-02", "notes": "Architecture planning, JSON data schema design, and modular React component migration specification." }
     ]
   },
   {
     "id": "local-ai",
-    "title": "Local AI Environment",
-    "description": "Privacy-focused local environment for running open-source large language models, inference workflows, and document retrieval locally without external cloud dependencies.",
+    "title": "Local AI",
+    "description": "Privacy-focused local AI environment for running open-source large language models, inference pipelines, and document retrieval locally without cloud API dependencies.",
     "category": "AI & Machine Learning",
-    "tags": ["Python", "Local LLMs", "RAG", "Vector Search", "Docker"],
+    "tags": ["Python", "Local LLMs", "Ollama", "RAG", "AI Engineering"],
     "status": "in-progress",
     "currentPhase": 2,
     "totalPhases": 4,
     "progressPercent": 50,
-    "repoUrl": "https://github.com/skikszilcho/local-AI",
-    "liveUrl": "",
+    "repoUrl": "https://github.com/IkagengSebesho",
+    "liveUrl": "#",
     "changelog": [
-      { "version": "0.1.0", "date": "2025-01", "notes": "Initial containerised model deployment and runtime configuration." },
+      { "version": "0.1.0", "date": "2025-01", "notes": "Initial local model deployment, runtime configuration, and prompt latency benchmarking." },
       { "version": "0.2.0", "date": "2025-02", "notes": "Integrated local document context indexing and conversational execution interface." }
     ]
   },
   {
     "id": "mise-en-place",
     "title": "Mise-en-Place",
-    "description": "Smart recipe management and meal preparation platform designed to organise recipes, automate meal planning and prep schedules, and track grocery and ingredient inventory.",
+    "description": "Smart recipe management and meal preparation platform designed to organise recipes, automate meal planning and prep schedules, and streamline grocery/ingredient inventory tracking.",
     "category": "Web / Application",
-    "tags": ["JavaScript", "React", "Tailwind CSS", "Database", "Full-Stack"],
+    "tags": ["Python", "JavaScript", "Full-Stack", "Automation", "Recipe Management"],
     "status": "in-progress",
     "currentPhase": 1,
     "totalPhases": 4,
     "progressPercent": 25,
-    "repoUrl": "https://github.com/skikszilcho/mise-en-place",
-    "liveUrl": "",
+    "repoUrl": "https://github.com/IkagengSebesho",
+    "liveUrl": "#",
     "changelog": [
       { "version": "0.1.0", "date": "2025-01", "notes": "System architecture, recipe data model design, and initial meal planning workflow specifications." }
     ]
   },
   {
     "id": "railway-crime-analytics",
-    "title": "Geospatial Railway Transit Analytics",
-    "description": "Exploratory data analysis, risk clustering, and interactive hotspot heatmaps to identify high-risk transit corridors and inform safety interventions.",
+    "title": "Geospatial Railway Crime Analytics & Heatmap",
+    "description": "Exploratory data analysis, geospatial risk clustering, and interactive hotspot heatmaps to identify high-risk railway transit corridors and inform safety interventions.",
     "category": "Data & Analytics",
     "tags": ["Python", "Pandas", "Power BI", "GeoJSON", "EDA", "Data Visualisation"],
     "status": "completed",
@@ -148,15 +144,15 @@ const fallbackProjects = [
     "repoUrl": "",
     "liveUrl": "",
     "changelog": [
-      { "version": "1.0.0", "date": "2024-06", "notes": "Delivered interactive GeoJSON heatmap, automated data pipelines, and KPI dashboard for risk assessment." }
+      { "version": "1.0.0", "date": "2024-06", "notes": "Delivered interactive GeoJSON heatmap, automated ETL pipelines, and executive Power BI KPI dashboard for risk assessment." }
     ]
   },
   {
     "id": "chemical-process-simulation-optimization",
-    "title": "Process Numerical Simulation & Optimisation",
+    "title": "Chemical Process Numerical Simulation & Optimisation",
     "description": "Computational modelling, discretization, and constrained non-linear optimization for complex engineering dynamic systems and process efficiency analysis.",
     "category": "Engineering / Simulation",
-    "tags": ["Python", "NumPy", "SciPy", "Numerical Simulation", "Optimisation"],
+    "tags": ["Python", "NumPy", "SciPy", "statsmodels", "Numerical Simulation", "Optimisation"],
     "status": "completed",
     "currentPhase": 3,
     "totalPhases": 3,
